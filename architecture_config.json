@@ -2,7 +2,7 @@
   "simulation": {"dt_s": 0.001, "duration_s": 5.0, "random_seed": null},
   "arm": {
     "link_lengths_m": [0.35, 0.30], 
-    "initial_angles_rad": [2.30, 2.35],
+    "initial_angles_rad": [-1.0, 2.35],
     "initial_velocity_rad_s": [0.0, 0.0], 
     "joint_inertia_kg_m2": [0.045, 0.025],
     "joint_damping_nms_rad": [0.55, 0.35], 
@@ -13,13 +13,13 @@
     "activation_time_constant_s": 0.030,
      "deactivation_time_constant_s": 0.050
   },
-  "target": {"x_m": 0.45, "y_m": 0.40, "elbow_solution": "down"},
+  "target": {"x_m": 0.0, "y_m": 0.60, "elbow_solution": "down"},
   "inverse_model": {"kp_nm_rad": [3.0, 2.0], 
   "kd_nms_rad": [0.5, 0.3], "baseline_cocontraction": 0.02},
-  "delays": {"motor_s": 0.050, "sensory_s": 0.15},
+  "delays": {"motor_s": 0.050, "sensory_s": 0.050},
   "sensory_feedback": {"velocity_smoothing": 0.08},
   "noise": {"enabled": true, "motor_command_sd": [0.01, 0.01, 0.01, 0.01], "joint_angle_feedback_sd_rad": [0.002, 0.002]},
-  "internal_model": {"enabled": false, "sensory_correction_gain": 0.002},
+  "internal_model": {"enabled": true, "sensory_correction_gain": 0.002},
   "goal": {"tolerance_m": 0.02, "hold_time_s": 0.100},
   "animation": {"interval_s": 0.020, "dpi": 110}
 }
